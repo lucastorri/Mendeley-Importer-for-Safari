@@ -58,6 +58,8 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://github.com/lucastorri/Mendeley-Importer-for-Safari/raw/master/update-manifest.plist</string>
 	<key>Website</key>
 	<string>http://github.com/lucastorri/Mendeley-Importer-for-Safari</string>
 </dict>
