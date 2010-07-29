@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+
+<script type="text/javascript">
+
+	function performCommand(event)
+	{
+	    if (event.command !== "mendeley-import")
+	        return;
+	    
+	    safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("activate-mendeley-import", safari.application.activeBrowserWindow.activeTab.url);
+	}
+	 
+	function validateCommand(event)
+	{
+	    if (event.command !== "mendeley-import")
+	        return;
+	 
+	    // Disable the target if the current tab has no URL.
+	    event.target.disabled = !safari.application.activeBrowserWindow.activeTab.url;
+	}
+	
+	safari.application.addEventListener("command", performCommand, false);
+	safari.application.addEventListener("validate", validateCommand, false);
+
+</script>
